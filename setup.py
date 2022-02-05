@@ -1,18 +1,21 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.1.10'
-DESCRIPTION = 'package to scrape live quotes from yahoofinance using threading'
-LONG_DESCRIPTION = "package to use threading to get live quotes of a list of symbols, inspired by stockquotes package"
+VERSION = '0.0.14'
+DESCRIPTION = 'get quotes from yahoo!Finance'
+LONG_DESCRIPTION = "package to scrape live/stream quotes from yahoofinance"
 
 setup(
-    name="batchquotes",
+    name="yfQuotes",
     version=VERSION,
     author='Justin Law',
     author_email="justin.kklaw@gmail.com",
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
-    install_requires=['beautifulsoup4==4.9.3'],
+    install_requires=[
+    'beautifulsoup4==4.9.3',
+    'aiohttp==3.8.1',
+    'websocket-client==1.2.3'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent"
